@@ -60,6 +60,7 @@ import transferEther from "./ethereTransfer.gif";
 import climate from "./climate.png";
 import main from "./main.jpeg";
 
+
 export default {
   hero2,
   founder1,

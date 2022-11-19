@@ -9,6 +9,8 @@ const MyApp = ({Component, pageProps})=> (
     <div>
         <Head>
             <title>Helping Hands</title>
+            <link rel="shortcut icon" href="/hh.png" />
+
         </Head>
     <NavBar />
     <Component {...pageProps} />
