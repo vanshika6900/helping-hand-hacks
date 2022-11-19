@@ -73,11 +73,11 @@ const DaysComponents = ({ el, i, setVisible, visible, setSelectedData, selectedD
                   {el.desc}
                 </p>
 
-                <p>
-                  {el.count}
-                </p>
 
               </div>
+              <p>
+                Votes :  {el.count}
+              </p>
 
 
               <br />
@@ -88,12 +88,12 @@ const DaysComponents = ({ el, i, setVisible, visible, setSelectedData, selectedD
           </div>
         </div>
 
-        <Modal class="modalcss" visible={visible} width="400" height="300" effect="fadeInUp" backgroundColor="grey" onClickAway={() => setVisible(false)}>
+        <Modal class="modalcss" visible={visible} width="400" height="400" effect="fadeInUp" backgroundColor="grey" onClickAway={() => setVisible(false)}>
           <div style={{ color: 'white', padding: 20, backgroundColor: '#07204b', height: '100%', width: '100%', display: 'flex', justifyContent: 'center', alignContent: 'center', flexDirection: 'column' }}>
             {walletId !== null ? (<p>WalletId: {walletId} </p>) : (<p>Connect Your Wallet to Vote !</p>)}
             <h1>{selectedData?.title}</h1>
             <p>{selectedData?.desc}</p>
-            <p>{selectedData?.count}</p>
+            <p>Votes :{selectedData?.count}</p>
             <button onClick={() => handleVote(selectedData)}>Vote Now </button>
           </div>
         </Modal>
