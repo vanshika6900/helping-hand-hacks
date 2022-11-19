@@ -3,7 +3,7 @@ import Image from "next/image";
 import { DiJqueryLogo } from "react-icons/di";
 //----IMPORT ICON
 
-import {BsWallet} from "react-icons/bs"
+import { BsWallet } from "react-icons/bs"
 import { MdNotifications } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { CgMenuLeft, CgMenuRight } from "react-icons/cg";
@@ -86,7 +86,7 @@ const NavBar = () => {
 
   // Wallet Connection
   const [walletAddress, setWalletAddress] = useState(null);
-  
+
   const checkIfWalletIsConnected = async () => {
     try {
       const { solana } = window;
@@ -99,7 +99,7 @@ const NavBar = () => {
             "connected with publickey:",
             response.publicKey.toString()
           );
-          window.localStorage.setItem('walletId',response.publicKey.toString())
+          window.localStorage.setItem('walletId', response.publicKey.toString())
           setWalletAddress(response.publicKey.toString());
         }
       } else {
@@ -118,8 +118,8 @@ const NavBar = () => {
     if (solana) {
       const response = await solana.connect();
       console.log("connected with public key", response.publicKey);
-      setWalletAddress(response.publicKey.toString());  
-      window.localStorage.setItem('walletId',response.publicKey.toString())    
+      setWalletAddress(response.publicKey.toString());
+      window.localStorage.setItem('walletId', response.publicKey.toString())
     }
   };
 
@@ -143,7 +143,7 @@ const NavBar = () => {
             <DiJqueryLogo onClick={() => router.push("/")} />
           </div>
           {/* <div className={Style.navbar_container_left_box_input}> */}
-            {/* <div className={Style.navbar_container_left_box_input_box}>
+          {/* <div className={Style.navbar_container_left_box_input_box}>
               <input type="text" placeholder="Search NFT" />
               <BsSearch onClick={() => {}} className={Style.search_icon} />
             </div> */}
@@ -159,15 +159,12 @@ const NavBar = () => {
 
           {/* HELP CENTER MENU */}
           <div className={Style.navbar_container_right_help}>
-            <p onClick={(e) => {router.push('/#petitionRedirect')}}>Petitions</p>
+            <p onClick={(e) => { router.push('/#petitionRedirect') }}>Petitions</p>
           </div>
-          {/* HELP CENTER MENU */}
-          <div className={Style.navbar_container_right_help}>
-            <p onClick={(e) => {router.push('/#pricingRedirect')}}>Pricing</p>
-          </div>
+
           {/* ABOUT US */}
           <div className={Style.navbar_container_right_help}>
-            <p onClick={(e) => {router.push('/#aboutUsRedirect')}}>About Us</p>
+            <p onClick={(e) => { router.push('/#aboutUsRedirect') }}>About Us</p>
           </div>
 
           {/* NOTIFICATION */}

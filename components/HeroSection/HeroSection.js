@@ -20,22 +20,22 @@ const HeroSection = () => {
           {/* <h1>{titleData} 🖼️</h1> */}
           <h1>Create Change with a Click</h1>
           <p>
-          Explore web3 with us while you add your signature on success for a greater vision. Create, Discover, Sign & Store Petitions as NFTs.
+            Explore web3 with us while you add your signature on success for a greater vision. Create, Discover, Sign & Store Petitions as NFTs.
           </p>
-          <div style={{display:"flex"}}>
-          <Button
-            btnName="Vote Now!"
-            handleClick={() => router.push("#petitionRedirect")}
-            
-          />
-    
-          <Button
-          btnName="Create Petition"
-          handleClick={() => router.push("/Form")}
-          />
+          <div style={{ display: "flex" }}>
+            <Button
+              btnName="Vote Now"
+              handleClick={() => router.push("#petitionRedirect")}
+
+            />
+
+            <Button
+              btnName="Create Petition"
+              handleClick={() => router.push("/Form")}
+            />
+          </div>
         </div>
-        </div>
-       
+
         <div className={Style.heroSection_box_right}>
           <Image
             src={images.hero}
@@ -43,7 +43,7 @@ const HeroSection = () => {
             width={600}
             height={600}
           />
-        </div>      
+        </div>
       </div>
     </div>
   );

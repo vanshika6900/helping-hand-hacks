@@ -20,7 +20,7 @@ const Collection = () => {
   const [apiData, setApiData] = useState([])
   const [visible, setVisible] = useState(false);
   const [popData, setPopData] = useState('');
-  const [selectedData , setSelectedData] = useState()
+  const [selectedData, setSelectedData] = useState()
   useEffect(() => {
     onValue(ref(db, `/`), (snapshot) => {
       let arr = [];
@@ -62,10 +62,10 @@ const Collection = () => {
   return (
     <div className={Style.collection}>
 
-     
+
 
       <div className={Style.collection_title}>
-        <h2>List of Petitions:</h2>
+        <h2>List of Petitions</h2>
         {/* <div className={Style.collection_collections}>
           <div className={Style.collection_collections_btn}>
             <button onClick={() => openPopular()}>
